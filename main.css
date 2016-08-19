@@ -1,0 +1,637 @@
+@font-face {
+    font-family: minecraftia;
+    src: url(fonts/minecraftia-reg.ttf);
+}
+
+body{
+    margin: 0px;
+    background-image: url(imgs/wd-bg.jpg);
+    background-size: auto;
+}
+
+#logo{
+    margin-top: 5px;
+    width: 400px;
+    height: 125px;
+    background-image:url(imgs/logo-2.png);
+        
+}
+
+#shop{
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-image: url(imgs/shop-bg-2.png);
+    background-size: static;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    box-shadow: 0 0 10px black;
+    margin-top: 20px;
+}
+
+#shopOpen{
+    width: 25px;
+    height: 65px;
+    margin-top: -128px;
+    background-image: url(imgs/shop-1.png);
+    background-size: cover;
+}
+
+#shopClose{
+    width: 25px;
+    height: 65px;
+    float: right;
+    margin-top: -61px;
+    background-image: url(imgs/shop-close%201.png);
+    background-size: cover;
+}
+
+#woodenPick{
+    width: 170px;
+    height: 60px;
+    background-size: cover;
+    background-image: url(imgs/woodenpick-button.png);
+    margin-top: 10px;
+    box-shadow: 0 0 5px black;
+}
+
+#settings{
+    width: 30px;
+	height: 30px;
+	position:absolute;
+	bottom:0;
+	right:0;
+    background-image: url(imgs/se-ico-hov.png);
+    background-size: cover;
+    transition: 0.5s;
+}
+
+#settings:hover{
+    width: 110px;
+}
+
+#settings_menu{
+    height: 0px; /* 100% Full-height */
+    width: 400px; /* 0 width - change this with JavaScript */
+    position:absolute;
+    right: 0%;
+    margin-left: -200px; /* Half of the width */
+    z-index: 1; /* Stay on top */
+    bottom: 0;
+    background-image: url(imgs/settings-bg.png);
+    background-size: static;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    box-shadow: 0 0 50px black;
+    overflow-y: hidden;
+}
+
+#diamond{
+    width: 300px; 
+    height: 300px; 
+    background-size: cover; 
+    image-rendering: pixelated; 
+    background-image: url(imgs/wd-dm.png);
+    transition: 0.1s;
+}
+
+#shopSel{
+    float: left;
+    margin-top: -60px;
+    height: 20px;
+    width: 150px;
+}
+
+#permanentUpgrades{
+    width: 30px;
+    height: 20px;
+    box-shadow: 0 0 5px black;
+    float: left;
+    background-image: url(imgs/perUpSel.png);
+    transition: 0.1s;
+}
+
+#permanentUpgrades:hover{
+    margin-top: 2px;
+}
+
+#enchantments{
+    width: 30px;
+    height: 20px;
+    box-shadow: 0 0 5px black;
+    float: left;
+    margin-left: 2px;
+    background-image: url(imgs/encUpSel.png);
+    transition: 0.1s;
+}
+
+#enchantments:hover{
+    margin-top: 2px;
+}
+
+#permanentUpgradesMenu{
+    height: 240px; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-image: url(imgs/perUpBg.jpg);
+    background-size: static;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    box-shadow: 0 0 5px black;
+    margin-top: 50px;
+    background-size: cover;
+}
+
+#enchantmentsMenu{
+    height: 240px; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-image:url(imgs/encBg.jpg);
+    background-size: static;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    box-shadow: 0 0 5px black;
+    margin-top: 50px;
+    background-size: cover;
+}
+
+#perUpTitle{
+    margin-top: -60px;
+    width: 170px;
+    height: 40px;
+    background-image: url(imgs/perUpTitle.png);
+}
+
+#buildnum{
+    float: left;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 10px;
+    opacity: 0.2;
+    margin-left: 2px;
+    margin-top: 7px;
+    color: white;
+}
+
+#settingsTitle{
+    width: 150px;
+    height: 50px;
+    margin-top: 5px;
+    background-image: url(imgs/settingsLogo.png);
+}
+
+#musicSetting{
+    font-family: 'Exo 2', sans-serif;
+}
+
+#author{
+    float: left;
+    margin-top: 258px;
+    font-family: 'Exo 2', sans-serif;
+    opacity: 0.1;
+    color: white;
+}
+
+#encUpTitle{
+    margin-top: -60px;
+    width: 170px;
+    height: 40px;
+    background-image: url(imgs/encUpTitle.png);
+}
+
+#fortune1{
+    width: 170px;
+    height: 60px;
+    background-size: cover;
+    background-image: url(imgs/fortune-1.png);
+    margin-top: 10px;
+    box-shadow: 0 0 5px black;
+    transition: 0.1s;
+    background-size: cover;
+}
+
+#statsbtn{
+    width: 25px;
+    height: 65px;
+    float: right;
+    margin-top: -66px;
+    background-image: url(imgs/stats.png);
+    background-size: cover;  
+}
+
+#stats{
+    height: 260px; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    top: 0;
+    right: 0;
+    background-image: url(imgs/stats_sign.png);
+    background-size: static;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    box-shadow: 0 0 50px black;
+    overflow-y: hidden;
+    margin-top: 20px;
+}
+
+#statsClose{
+    width: 25px;
+    height: 65px;
+    float: left;
+    margin-left: 16px;
+    margin-top: -47px;
+    background-image: url(imgs/shop-close%201.png);
+    background-size: cover;  
+    transform: rotate(-90deg);
+}
+
+#statsCan{
+    margin-top: -59px;
+}
+
+#message{
+    font-family: minecraftia;
+    color: red;
+    margin-left: 600px;
+    margin-top: -40px;
+    position: fixed;
+}
+
+#stonePick{
+    width: 170px;
+    height: 60px;
+    background-size: cover;
+    background-image: url(imgs/stonePickaxe.png);
+    margin-top: 10px;
+    box-shadow: 0 0 5px black;
+}
+
+#fortune2{
+    width: 170px;
+    height: 60px;
+    background-size: cover;
+    background-image: url(imgs/fortune2.png);
+    margin-top: 10px;
+    box-shadow: 0 0 5px black;
+    transition: 0.1s;
+    background-size: cover;
+}
+
+#technologies{
+    width: 30px;
+    height: 20px;
+    box-shadow: 0 0 5px black;
+    float: left;
+    margin-left: 2px;
+    background-image: url(imgs/techUpSel.png);
+    transition: 0.1s;
+}
+
+#technologies:hover{
+    margin-top: 2px;
+}
+
+#technologyMenu{
+    height: 240px; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-image:url(imgs/techUpBg.png);
+    background-size: static;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    box-shadow: 0 0 5px black;
+    margin-top: 50px;
+    background-size: cover;
+}
+
+#techUpTitle{
+    margin-top: -60px;
+    width: 170px;
+    height: 40px;
+    background-image: url(imgs/techUpTitle.png);
+}
+
+#ironPick{
+    width: 170px;
+    height: 60px;
+    background-size: cover;
+    background-image: url(imgs/ironPickaxe.png);
+    margin-top: 10px;
+    box-shadow: 0 0 5px black;
+}
+
+#fortune3{
+    width: 170px;
+    height: 60px;
+    background-size: cover;
+    background-image: url(imgs/fortune3.png);
+    margin-top: 10px;
+    box-shadow: 0 0 5px black;
+    transition: 0.1s;
+    background-size: cover;
+}
+
+#automatedDrill{
+    width: 170px;
+    height: 60px;
+    background-size: cover;
+    background-image: url(imgs/automatedDrill.png);
+    margin-top: 10px;
+    box-shadow: 0 0 5px black;
+}
+
+#oreProcessing{
+    width: 170px;
+    height: 60px;
+    background-size: cover;
+    background-image: url(imgs/oreProcessing-morethan1dps.png);
+    margin-top: 10px;
+    box-shadow: 0 0 5px black;
+}
+
+#researchUnlock{
+    width: 170px;
+    height: 60px;
+    background-size: cover;
+    background-image: url(imgs/researchUnlock-requiresmorethan5dps.png);
+    margin-top: 10px;
+    box-shadow: 0 0 5px black;
+}
+
+#infoBtn{
+    width: 30px;
+	height: 30px;
+	position:absolute;
+	top:0;
+	left:0;
+    background-image: url(imgs/inf-ico-hov.png);
+    background-size: cover;
+    transition: 0.5s;
+    background-position: right;
+}
+
+#infoBtn:hover{
+    width: 110px;
+}
+
+#research{
+    width: 30px;
+    height: 20px;
+    box-shadow: 0 0 5px black;
+    float: left;
+    margin-left: 2px;
+    background-image: url(imgs/sciUpSel.png);
+    transition: 0.1s;
+}
+
+#research:hover{
+    margin-top: 2px;
+}
+
+#researchMenu{
+    height: 240px; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-image:url(imgs/sciUpBg.png);
+    background-size: cover;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    box-shadow: 0 0 5px black;
+    margin-top: 50px;
+    background-size: cover;
+}
+
+#sciUpTitle{
+    margin-top: -60px;
+    width: 170px;
+    height: 40px;
+    background-image: url(imgs/sciUpTitle.png);
+}
+
+#saveButtons{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 32px;
+    width: 140px;
+}
+
+
+#menuBtn{
+    width: 32px;
+    height: 32px;
+    float: left;
+    background-image: url(imgs/menu.png);
+    transition: 0.1s;
+}
+
+#menuBtn:hover{
+    box-shadow: 0 0 5px black;
+    z-index: 1;
+}
+
+
+#saveBtn{
+    width: 0;
+    height: 32px;
+    float: left;
+    transition: 0.125s;
+    background-image: url(imgs/save.png);
+}
+
+#saveBtn:active{
+    margin-top: 2px;
+    transition: 0.1s;
+}
+
+
+#loadBtn{
+    width: 0;
+    height: 32px;
+    float: left;
+    transition: 0.25s;
+    background-image: url(imgs/load.png);
+}
+
+#loadBtn:active{
+    margin-top: 2px;
+    transition: 0.1s;
+}
+
+#eraseBtn{
+    width: 0;
+    height: 32px;
+    float: left;
+    transition: 0.5s;
+    background-image: url(imgs/erase.png);
+}
+
+#eraseBtn:active{
+    margin-top: 2px;
+    transition: 0.1s;
+}
+
+#sci-advOre{
+    width: 170px;
+    height: 70px;
+    margin-top: 10px;
+}
+
+#sci-advOre-content{
+    width: 170px;
+    height: 60px;
+    background-image: url(imgs/sci-advOre.png);
+    box-shadow: 0 0 5px black;
+}
+
+#sci-advOre-progress{
+    width: 170px;
+    height: 10px;
+}
+
+#sci-advOre-progressbar{
+    background-color: #3498db;
+    background-size: fixed;
+    height: 10px;
+    width: 0%;
+    float: left;
+    box-shadow: 0 0 10px black;
+    transition: 60s;
+    transition-timing-function: linear;
+}
+
+#titleBar{
+    width: 100%;
+    height: 20px;
+    -webkit-app-region: drag;
+    box-shadow: 0 0 10px black;
+}
+
+#title{
+    height: 20px;
+    float: left;
+    font-family: 'Titillium Web', sans-serif;
+    margin-top: -4px;
+    margin-left: 2px;
+    font-size: 18px;
+    color: white;
+}
+
+#titleBtns{
+    float: right;
+    height: 20px;
+    -webkit-app-region: no-drag;
+}
+
+#t_close{
+    margin-top: 1px;
+    height: 18px;
+    width: 20px;
+    margin-right: 2px;
+    float: right;
+    background-image: url(imgs/t_close-norm.png);
+}
+
+#t_close:hover{
+    background-image: url(imgs/t_close-hov.png);
+}
+
+#t_window{
+    height: 18px;
+    width: 20px;
+    margin-top: 1px;
+    margin-right: 5px;
+    float: right;
+    background-image: url(imgs/t_window-norm.png);
+}
+
+#t_window:hover{
+    background-image: url(imgs/t_window-hov.png);
+}
+
+#t_minimize{
+    margin-top: 1px;
+    height: 18px;
+    width: 20px;
+    float: right;
+    margin-right: 5px;
+    background-image: url(imgs/t_minimize-norm.png);
+}
+
+#t_minimize:hover{
+    background-image: url(imgs/t_minimize-hov.png);
+}
+
+#dragArea{
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    -webkit-app-region: drag;
+}
+
+#diamondPick{
+    width: 170px;
+    height: 60px;
+    background-size: cover;
+    background-image: url(imgs/diamondPickaxe.png);
+    margin-top: 10px;
+    box-shadow: 0 0 5px black;
+}
+
+#achievement{
+    position: fixed;
+    bottom: 35px;
+    height: 75px;
+    width: 0 ;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px black;
+    transition: 1s;
+    z-index: 1;
+    background-size: static;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#achievementIco{
+    height: 64px;
+    width: 64px;
+    margin-top: 5px;
+    margin-left: 5px;
+    background-image: url(imgs/achievements/placeholderIco.png);
+}
+
+#achievementTitle{
+    background-image: url(imgs/achievements/achTitle.png);
+    height: 20px;
+    margin-top: -64px;
+    margin-left: 62px;
+    width: 168px;
+}
+
+#achievementText{
+    background-image: url(imgs/achievements/placeholder.png);
+    height: 42px;
+    margin-top: -2px;
+    margin-left: 71px;
+    width: 168px;
+}

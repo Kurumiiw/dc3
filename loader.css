@@ -1,0 +1,22 @@
+@font-face {
+    font-family: minecraftia;
+    src: url(fonts/minecraftia-reg.ttf);
+}
+
+#h1{
+    font-family: minecraftia;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+#h2{
+    margin-top: -30px;
+    font-family: minecraftia;
+    font-size: 15px;
+}
+
+#h3{
+    margin-top: 100px;
+    font-family: minecraftia;
+    font-size: 12px;
+}

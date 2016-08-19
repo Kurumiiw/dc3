@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href='https://fonts.googleapis.com/css?family=Exo+2' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="main.css" />
+        <meta charset="UTF-8">
+        <title>Diamond Clicker 3</title>
+    </head>
+    <body onload="setup();">
+        <div id="titleBar">
+            <div id="title">Diamond Clicker 3</div>
+            <div id="buildnum">build013</div>
+            <div id="titleBtns">
+                <div id="t_close"></div>
+                <div id="t_window"></div>
+                <div id="t_minimize"></div>
+            </div>
+        </div>
+        <div id="dragArea"></div>
+        <center><div id="logo"></div></center>
+        <div id="shopOpen" onclick="openNav();"></div>
+        <div id="shop">
+            <div id="shopSel">
+                <div id="permanentUpgrades" onclick="perUpSelected();" data-toggle="tooltip" title="Permanent Upgrades"></div>
+                <div id="enchantments" onclick="encUpSelected();" data-toggle="tooltip" title="Enchantments"></div>
+                <div id="technologies" onclick="techUpSelected();" data-toggle="tooltip" title="Technologies"></div>
+                <div id="research" onclick="sciUpSelected();" data-toggle="tooltip" title="Research"></div>
+            </div>
+            <div id="shopClose" onclick="closeNav();"></div>
+            <div id="permanentUpgradesMenu">
+                <center>
+                    <div id="perUpTitle"></div>
+                    <div id="woodenPick" onclick="woodenPickBuy(); bounceItem('woodenPick');"></div>
+                    <div id="stonePick" onclick="stonePickBuy(); bounceItem('stonePick');"></div>
+                    <div id="ironPick" onclick="ironPickBuy(); bounceItem('ironPick');"></div>
+                    <div id="diamondPick" onclick="diamondPickBuy(); bounceItem('diamondPick');"></div>
+                </center>
+            </div>
+            <div id="enchantmentsMenu">
+                <center><div id="encUpTitle"></div></center>
+                <center><div id="fortune1" onclick="fortune1Buy(); bounceItem('fortune1');"></div></center>
+                <center><div id="fortune2" onclick="fortune2Buy(); bounceItem('fortune2');"></div></center>
+                <center><div id="fortune3" onclick="fortune3Buy(); bounceItem('fortune3');"></div></center>
+            </div>
+            <div id="technologyMenu">
+                <center><div id="techUpTitle"></div></center>
+                <center><div id="automatedDrill" onclick="automatedDrillBuy(); bounceItem('automatedDrill');"></div></center>
+                <center><div id="oreProcessing" onclick="oreProcessingBuy(); bounceItem('oreProcessing');"></div></center>
+                <center><div id="researchUnlock" onclick="researchUnlockBuy(); bounceItem('researchUnlock');"></div></center>
+            </div>
+            <div id="researchMenu">
+                <center><div id="sciUpTitle"></div></center>
+                <center><div id="sci-advOre">
+                    <div id="sci-advOre-content" onclick="sciAdvOreBuy();"></div>
+                    <div id="sci-advOre-progress"><div id="sci-advOre-progressbar"</div>
+                </div></center>
+            </div>
+        </div>
+        <div id="statsbtn" onclick="openStats();"></div>
+        <div id="stats">
+            <canvas id="statsCan" height="318"></canvas>
+            <div id="statsClose" onclick="closeStats();"></div>
+        </div>
+        <center><canvas id="canvas" width="700" height="100" style="margin-top: 50px;" ></canvas>
+        <div id="diamond" onclick="diamond_click();"/></center>
+        <div id="saveButtons">
+            <div id="menuBtn" onclick="menuBtnClick();" data-toggle="tooltip" title="Menu"></div>
+            <div id="saveBtn" onclick="save();" data-toggle="tooltip" title="Save"></div>
+            <div id="loadBtn" onclick="load();" data-toggle="tooltip" title="Load"></div>
+            <div id="eraseBtn" onclick="deleteSave();" data-toggle="tooltip" title="Erase"></div>
+        </div>
+        <div id="settings" onclick="settBtn();"></div>
+        <div id="settings_menu">
+            <center><div id="settingsTitle"></div>
+                <div id="infoBtn" onclick="infoBtn();"></div>
+                <div id="musicSetting"><input id="musicSettingBox" type="checkbox" checked="true" onchange="musicChange();">Music<br>
+                <input type="range" id="volume"/><br />
+                <input type="button" id="resetGame" onclick="reset();" value="Reset game" />
+                </div>
+            </center>
+            <div id="author">&copy Ola Jacobsen / Vemund Langaas 2016</div>
+        </div>
+            <div id="achievement">
+                <div id="achievementIco"></div>
+                <div id="achievementTitle"></div>
+                <div id="achievementText"></div>
+            </div>
+        <script src="saveMan.js"></script>
+        <script src="game.js"></script>
+        <script src="prog.js"></script>
+    </body>
+</html>
