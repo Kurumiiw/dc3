@@ -24,6 +24,10 @@ function save(){
         
         
         localStorage.setItem("achievement_theBeginning", JSON.stringify(achievement_theBeginning));
+        localStorage.setItem("achievement_gettingAnUpgrade", JSON.stringify(achievement_gettingAnUpgrade));
+        localStorage.setItem("achievement_shiney", JSON.stringify(achievement_shiney));
+        localStorage.setItem("achievement_onePerSec", JSON.stringify(achievement_onePerSec));
+        localStorage.setItem("achievement_1000", JSON.stringify(achievement_1000));
         alert("Game saved.");
      }
 }
@@ -53,7 +57,10 @@ function load(){
             SciAdvOreResearched = JSON.parse(localStorage.getItem("SciAdvOreResearched"));
             
             achievement_theBeginning = JSON.parse(localStorage.getItem("achievement_theBeginning"));
-            
+            achievement_gettingAnUpgrade = JSON.parse(localStorage.getItem("achievement_gettingAnUpgrade"));
+            achievement_shiney = JSON.parse(localStorage.getItem("achievement_shiney"));
+            achievement_onePerSec = JSON.parse(localStorage.getItem("achievement_onePerSec"));
+            achievement_1000 = JSON.parse(localStorage.getItem("achievement_1000"));
             
             for (i = automatedDrillPurchased; i>0; i--){
                 setTimeout(function(){
@@ -99,6 +106,10 @@ function deleteSave(){
             
             
             localStorage.removeItem("achievement_theBeginning");
+            localStorage.removeItem("achievement_gettingAnUpgrade");
+            localStorage.removeItem("achievement_shiney");
+            localStorage.removeItem("achievement_onePerSec");
+            localStorage.removeItem("achievement_1000");
             alert("Deleted save.");
         }
     }else{

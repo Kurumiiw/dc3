@@ -30,7 +30,9 @@ var runSciAdvOre = 0;
 
 var achievement_theBeginning = 0;
 var achievement_gettingAnUpgrade = 0;
-
+var achievement_shiney = 0;
+var achievement_onePerSec = 0;
+var achievement_1000 = 0;
 
 var music=new Audio("snd/wallpaper.mp3");
 var mess = "";
@@ -83,7 +85,7 @@ function draw(){
                 ctx.fillText(kDiamonds + " Diamonds", 500, 70);
                 ctx.lineWidth = 2;
                 ctx.strokeStyle = "black";
-                ctx.strokeText(kDiamonds  + " Diamonds", 500, 70); 
+                ctx.strokeText(kDiamonds  + " Diamonds", 500, 70);
             }else{
                 ctx.fillText(diamonds + " Diamonds", 500, 70);
                 ctx.lineWidth = 2;
@@ -156,6 +158,10 @@ function draw(){
     
     if(dps > 0.9){
         document.getElementById("oreProcessing").style.backgroundImage = "url(imgs/oreProcessing.png)";
+        if(achievement_onePerSec == 0){
+            achievement("onePerSec");
+            achievement_onePerSec = 1;
+        }
     }
     
     if(dps > 5){
@@ -170,10 +176,18 @@ function draw(){
     if(SciAdvOreResearched == 1){
         document.getElementById("sci-advOre-content").style.backgroundImage = "url(imgs/sci-advOre-researched.png)";
         document.getElementById("diamondPick").style.display = "block";
+        document.getElementById("permanentUpgradesMenu").style.height = "280px";
     }
     
     if(diamondPickPurchased == 1){
        document.getElementById("diamondPick").style.backgroundImage = "url('imgs/diamondPickaxe-purchased.png')";
+    }
+    
+    if(diamonds > 1000){
+        if(achievement_1000 == 0){
+            achievement("1000");
+            achievement_1000 = 1;
+        }
     }
     
     setTimeout(function() {
@@ -271,6 +285,8 @@ function fortune1Buy(){
         if(woodenPickPurchased == 1){
             if(fortune1Purchased == 1){
                 message('Fortune II unlocked!');
+                achievement("shiney");
+                achievement_shiney = 1;
             }
             fortune1Purchased = fortune1Purchased + 0.2;
             console.log("Player purchased fortune1");
@@ -378,7 +394,7 @@ function researchUnlockBuy(){
                 console.log("Player purchased researchUnlock");
                 diamonds = diamonds - 2500;
                 researchUnlockPurchased = researchUnlockPurchased + 1;
-                message('Reasearch unlocked!');
+                message('Research unlocked!');
             }else{
                 console.log("Player already has researchUnlock! > researchUnlock")
             }
@@ -472,12 +488,35 @@ function achievement(ach){
     if(ach == "theBeginning"){
         document.getElementById('achievementIco').style.backgroundImage = "url('imgs/achievements/"+ ach +"/ico.png')";
         document.getElementById('achievementText').style.backgroundImage = "url('imgs/achievements/"+ ach +"/text.png')";
+        document.getElementById('achievementTitle').style.backgroundImage = "url('imgs/achievements/"+ ach +"/title.png')";
         achievement_theBeginning = 1;
     }else{
         if(ach == "gettingAnUpgrade"){
             document.getElementById('achievementIco').style.backgroundImage = "url('imgs/achievements/"+ ach +"/ico.png')";
             document.getElementById('achievementText').style.backgroundImage = "url('imgs/achievements/"+ ach +"/text.png')";
+            document.getElementById('achievementTitle').style.backgroundImage = "url('imgs/achievements/"+ ach +"/title.png')";
             achievement_gettingAnUpgrade = 1;
+        }else{
+            if(ach == "shiney"){
+                document.getElementById('achievementIco').style.backgroundImage = "url('imgs/achievements/"+ ach +"/ico.png')";
+                document.getElementById('achievementText').style.backgroundImage = "url('imgs/achievements/"+ ach +"/text.png')";
+                document.getElementById('achievementTitle').style.backgroundImage = "url('imgs/achievements/"+ ach +"/title.png')";
+                achievement_shiney = 1;
+            }else{
+                if(ach == "onePerSec"){
+                    document.getElementById('achievementIco').style.backgroundImage = "url('imgs/achievements/"+ ach +"/ico.png')";
+                    document.getElementById('achievementText').style.backgroundImage = "url('imgs/achievements/"+ ach +"/text.png')";
+                    document.getElementById('achievementTitle').style.backgroundImage = "url('imgs/achievements/"+ ach +"/title.png')";
+                    achievement_onePerSec = 1;
+                }else{
+                    if(ach == "1000"){
+                        document.getElementById('achievementIco').style.backgroundImage = "url('imgs/achievements/"+ ach +"/ico.png')";
+                        document.getElementById('achievementText').style.backgroundImage = "url('imgs/achievements/"+ ach +"/text.png')";
+                        document.getElementById('achievementTitle').style.backgroundImage = "url('imgs/achievements/"+ ach +"/title.png')";
+                        achievement_1000 = 1;
+                    }
+                }
+            }
         }
     }
     
