@@ -176,7 +176,10 @@ function menuBtnClick(){
         
         document.getElementById("t_close").addEventListener("click", function (e) {
           const window = remote.getCurrentWindow();
-          window.close();
+          var r = confirm("Are you sure you want to quit? \nAll unsaved progress will be lost.");
+          if (r == true) {
+            window.close();
+          }
         }); 
       };
       
