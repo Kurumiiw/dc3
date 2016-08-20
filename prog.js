@@ -40,7 +40,7 @@ function closeNav() {
     document.getElementById("technologyMenu").style.width = "0";
     document.getElementById("researchMenu").style.width = "0";
 
-    document.getElementById("achievement").style.marginLeft = "0";
+    document.getElementById("achievement").style.marginLeft = "25px";
 }
 
 /* Set the width of the side navigation to 250px */
@@ -84,20 +84,26 @@ function closeStats() {
 function openAchievements(){
     if(achOpen == 0){
         document.getElementById("achievementsMenu").style.width = "275px";
-        document.getElementById("achievementsMenuBtn").style.marginLeft = "250px";
-        document.getElementById("achievement").style.marginLeft = "275px";
+        document.getElementById("achievementsMenuBtn").style.marginLeft = "275px";
+        document.getElementById("achievement").style.marginLeft = "300px";
         
         document.getElementById("aTheBeginning").style.width = "250px";
         document.getElementById("aShiney").style.width = "250px";
+        document.getElementById("aGettingAnUpgrade").style.width = "250px";
+        document.getElementById("aOnePerSec").style.width = "250px";
+        document.getElementById("a1000").style.width = "250px";
         
         achOpen = 1;
     }else{
         document.getElementById("achievementsMenu").style.width = "0";
         document.getElementById("achievementsMenuBtn").style.marginLeft = "0";
-        document.getElementById("achievement").style.marginLeft = "0";
+        document.getElementById("achievement").style.marginLeft = "25px";
     
         document.getElementById("aTheBeginning").style.width = "0";
         document.getElementById("aShiney").style.width = "0";
+        document.getElementById("aGettingAnUpgrade").style.width = "0";
+        document.getElementById("aOnePerSec").style.width = "0";
+        document.getElementById("a1000").style.width = "0";
         achOpen = 0;
     }
 }
