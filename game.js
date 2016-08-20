@@ -29,17 +29,12 @@ var researchUnlockPurchased = 0;
 
 var SciAdvOreResearched = 0;
 var runSciAdvOre = 0;
-var SciAdvOreRunning = 0;
 
 var achievement_theBeginning = 0;
 var achievement_gettingAnUpgrade = 0;
 var achievement_shiney = 0;
 var achievement_onePerSec = 0;
 var achievement_1000 = 0;
-
-var achievementsGot = 0;
-var totalAchievements = 5;
-var achievementPercentage = achievementsGot / totalAchievements * 100;
 
 var music=new Audio("snd/wallpaper.mp3");
 var mess = "";
@@ -74,8 +69,6 @@ function draw(){
     fortuneMod = Math.round(fortuneMod * 10) / 10;
     dps = Math.round(dps * 10) / 10;
     Mdiamonds = Math.round(Mdiamonds * 10) / 10;
-    
-    achievementPercentage = achievementsGot / totalAchievements * 100;
     
     ctx.clearRect(0, 0, 1000, 100);
     stats.clearRect(0, 0, 250, 400);
@@ -210,13 +203,6 @@ function draw(){
             achievement("1000");
             achievement_1000 = 1;
         }
-    }
-    document.getElementById("aA_num").innerHTML = achievementsGot + "/" + totalAchievements;
-    document.getElementById("amountAchievements").innerHTML =" achievements got.";
-    document.getElementById("aA_percent").innerHTML = achievementPercentage + "%";
-    
-    if(document.getElementById("shop").style.width == "250px"){
-        document.getElementById("achievement").style.marginLeft = "250px";
     }
     
     setTimeout(function() {
@@ -476,16 +462,11 @@ function diamond_click(){
 function sciAdvOreBuy(){
     if(SciAdvOreResearched == 0){
         if(diamonds > 9999.9){
-            if(SciAdvOreRunning == 0){
             diamonds = diamonds - 10000;
             document.getElementById('sci-advOre-progressbar').style.width = '100%'; bounceItem('sci-advOre');
             runSciAdvOre = 1;
             sciAdvOreRun();
             sciAdvOreLogic(); 
-            }else{
-                console.log("sciAdvOre is already researching!")
-            }
-
         }else{
         console.log("Player tried to purchase SciAdvOre, but they didn't have enough diamonds.")
         }
@@ -497,7 +478,6 @@ function sciAdvOreBuy(){
 
 function sciAdvOreRun(){
     if(runSciAdvOre == 1){
-        SciAdvOreRunning = 1;
         setTimeout(function(){
             diamonds = diamonds - 1;
             sciAdvOreRun();
@@ -509,7 +489,6 @@ function sciAdvOreLogic(){
     setTimeout(function(){
         runSciAdvOre = 0;
         SciAdvOreResearched = 1;
-        SciAdvOreRunning = 0;
     }, 60000);
 }
 
@@ -558,7 +537,6 @@ function achievement(ach){
     
     document.getElementById('achievement').style.width = '250px';
     
-    achievementsGot = achievementsGot + 1;
     setTimeout(function(){
         document.getElementById('achievement').style.width = '0';
     }, 4000);
