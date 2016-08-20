@@ -600,9 +600,9 @@ body{
 
 #achievement{
     position: fixed;
-    bottom: 32px;
+    bottom: 100px;
     height: 75px;
-    width: 0;
+    width: 0 ;
     background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 10px black;
     transition: 1s;
@@ -610,7 +610,6 @@ body{
     background-size: static;
     overflow-x: hidden;
     overflow-y: hidden;
-    margin-left: 25px;
 }
 
 #achievementIco{
@@ -638,14 +637,14 @@ body{
 }
 
 #achievementsMenuBtn{
+    border: 1px solid white;
     width: 25px;
-    height: 120px;
+    height: 65px;
     float: left;
     bottom: 32px;
     position: absolute;
-    transition: 1s;
+    transition: 0.5s;
     z-index: 2;
-    background-image: url(imgs/achievementsBtn.png);
 }
 
 #achievementsMenu{
@@ -657,20 +656,19 @@ body{
     image-rendering: pixelated; 
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
-    transition: 1s; /* 0.5 second transition effect to slide in the sidenav */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
     box-shadow: 0 0 10px black;
     background-color: rgba(0, 0, 0, 0.25);
     margin-top: 20px;
     bottom: 32px;
-    overflow-y: hidden;
 }
 
 #aTheBeginning{    
     position: fixed;
     width: 0;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 10px black;
-    transition: 1s;
+    transition: 0.5s;
     background-size: static;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -705,9 +703,9 @@ body{
 #aShiney{    
     position: fixed;
     width: 0;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 10px black;
-    transition: 1s;
+    transition: 0.5s;
     background-size: static;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -738,150 +736,4 @@ body{
     margin-top: -2px;
     margin-left: 71px;
     width: 168px;
-}
-
-#aGettingAnUpgrade{    
-    position: fixed;
-    width: 0;
-    background-color: rgba(0, 0, 0, 0.2);
-    box-shadow: 0 0 10px black;
-    transition: 1s;
-    background-size: static;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    margin-left: 10px;
-    height: 75px;
-    margin-top: 170px;
-}
-
-#aGAUIco{
-    height: 64px;
-    width: 64px;
-    margin-top: 5px;
-    margin-left: 5px;
-    background-image: url(imgs/achievements/gettingAnUpgrade/ico.png);
-}
-
-#aGAUTitle{
-    background-image: url(imgs/achievements/gettingAnUpgrade/title.png);
-    height: 20px;
-    margin-top: -64px;
-    margin-left: 68px;
-    width: 168px;
-}
-
-#aGAUText{
-    background-image: url(imgs/achievements/gettingAnUpgrade/text.png);
-    height: 42px;
-    margin-top: -2px;
-    margin-left: 71px;
-    width: 168px;
-}
-
-#aOnePerSec{    
-    position: fixed;
-    width: 0;
-    background-color: rgba(0, 0, 0, 0.2);
-    box-shadow: 0 0 10px black;
-    transition: 1s;
-    background-size: static;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    margin-left: 10px;
-    height: 75px;
-    margin-top: 255px;
-}
-
-#aOPSIco{
-    height: 64px;
-    width: 64px;
-    margin-top: 5px;
-    margin-left: 5px;
-    background-image: url(imgs/achievements/onePerSec/ico.png);
-}
-
-#aOPSTitle{
-    background-image: url(imgs/achievements/onePerSec/title.png);
-    height: 20px;
-    margin-top: -64px;
-    margin-left: 68px;
-    width: 168px;
-}
-
-#aOPSText{
-    background-image: url(imgs/achievements/onePerSec/text.png);
-    height: 42px;
-    margin-top: -2px;
-    margin-left: 71px;
-    width: 168px;
-}
-
-#a1000{    
-    position: fixed;
-    width: 0;
-    background-color: rgba(0, 0, 0, 0.2);
-    box-shadow: 0 0 10px black;
-    transition: 1s;
-    background-size: static;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    margin-left: 10px;
-    height: 75px;
-    margin-top: 340px;
-}
-
-#a1000Ico{
-    height: 64px;
-    width: 64px;
-    margin-top: 5px;
-    margin-left: 5px;
-    background-image: url(imgs/achievements/1000/ico.png);
-}
-
-#a1000Title{
-    background-image: url(imgs/achievements/1000/title.png);
-    height: 20px;
-    margin-top: -64px;
-    margin-left: 68px;
-    width: 168px;
-}
-
-#a1000Text{
-    background-image: url(imgs/achievements/1000/text.png);
-    height: 42px;
-    margin-top: -2px;
-    margin-left: 71px;
-    width: 168px;
-}
-
-#aA_num{    
-    position: absolute;
-    bottom: 5px;
-    margin-left: 5px;
-    font-family: minecraftia;
-    color: yellow;
-    height: 20px;
-}
-
-#amountAchievements{
-    position: absolute;
-    bottom: 5px;
-    margin-left: 45px;
-    width: 240px;
-    height: 20px;
-    font-family: minecraftia;
-    color: white;
-}
-
-#achievementsMenuTab{
-    height: 420px;
-}
-
-#aA_percent{
-    position: absolute;
-    bottom: 5px;
-    margin-left: 220px;
-    font-family: minecraftia;
-    color: #3498db;
-    height: 20px;
 }
