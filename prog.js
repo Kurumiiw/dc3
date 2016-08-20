@@ -27,6 +27,9 @@ function openNav() {
         }
     }
     document.getElementById("achievement").style.marginLeft = "250px";
+    if(achOpen == 1){
+        openAchievements();
+    }
 }
 
 /* Set the width of the side navigation to 0 */
