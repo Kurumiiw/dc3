@@ -7,7 +7,6 @@ var sciSel = 0;
 var menuBtnClicked = 0;
 var titleHide = 0;
 
-var achOpen = 0;
 /* Set the width of the side navigation to 250px */
 function openNav() {
     document.getElementById("shop").style.width = "250px";
@@ -79,27 +78,6 @@ function openStats() {
 /* Set the width of the side navigation to 0 */
 function closeStats() {
     document.getElementById("stats").style.width = "0";
-}
-
-function openAchievements(){
-    if(achOpen == 0){
-        document.getElementById("achievementsMenu").style.width = "275px";
-        document.getElementById("achievementsMenuBtn").style.marginLeft = "250px";
-        document.getElementById("achievement").style.marginLeft = "275px";
-        
-        document.getElementById("aTheBeginning").style.width = "250px";
-        document.getElementById("aShiney").style.width = "250px";
-        
-        achOpen = 1;
-    }else{
-        document.getElementById("achievementsMenu").style.width = "0";
-        document.getElementById("achievementsMenuBtn").style.marginLeft = "0";
-        document.getElementById("achievement").style.marginLeft = "0";
-    
-        document.getElementById("aTheBeginning").style.width = "0";
-        document.getElementById("aShiney").style.width = "0";
-        achOpen = 0;
-    }
 }
 
 function perUpSelected(){
