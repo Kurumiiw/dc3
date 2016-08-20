@@ -10,7 +10,7 @@
     <body onload="setup();">
         <div id="titleBar">
             <div id="title">Diamond Clicker 3</div>
-            <div id="buildnum">build014</div>
+            <div id="buildnum">build015</div>
             <div id="titleBtns">
                 <div id="t_close"></div>
                 <div id="t_window"></div>
@@ -64,6 +64,19 @@
         </div>
         <center><canvas id="canvas" width="500" height="100" style="margin-top: 50px;" ></canvas>
         <div id="diamond" onclick="diamond_click();"/></center>
+        <div id="achievementsMenuBtn" onclick="openAchievements();"></div>
+        <div id="achievementsMenu">
+            <div id="aTheBeginning">
+                <div id="aTBIco"></div>
+                <div id="aTBTitle"></div>
+                <div id="aTBText"></div>
+            </div>
+            <div id="aShiney">
+                <div id="aSIco"></div>
+                <div id="aSTitle"></div>
+                <div id="aSText"></div>
+            </div>
+        </div>
         <div id="saveButtons">
             <div id="menuBtn" onclick="menuBtnClick();" data-toggle="tooltip" title="Menu"></div>
             <div id="saveBtn" onclick="save();" data-toggle="tooltip" title="Save"></div>
