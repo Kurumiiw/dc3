@@ -20,7 +20,9 @@ var fortune2Purchased = 1;
 var fortune3Purchased = 1;
 var fortuneMod =  fortune1Purchased + fortune2Purchased + fortune3Purchased - 3;
 var Mdiamonds = diamonds / 100000;
-var kDiamonds = diamonds * 10;
+var kDiamonds = Math.round(diamonds);
+var kTotDia = Math.round(totDia);
+var MTotDia = totDia / 1000000;
 var automatedDrillPurchased = 0;
 var oreProcessingPurchased = 0;
 var researchUnlockPurchased = 0;
@@ -58,8 +60,12 @@ function draw(){
     Mdiamonds = diamonds / 1000000;
     kDiamonds = Math.round(diamonds);
     
+    kTotDia = Math.round(totDia);
+    MTotDia = totDia / 1000000;
+    
     diamonds = Math.round(diamonds * 10) / 10;
     totDia = Math.round(totDia * 10) / 10;
+    MTotDia = Math.round(MTotDia * 10) / 10;
     fortuneMod = Math.round(fortuneMod * 10) / 10;
     dps = Math.round(dps * 10) / 10;
     Mdiamonds = Math.round(Mdiamonds * 10) / 10;
@@ -67,30 +73,29 @@ function draw(){
     ctx.clearRect(0, 0, 1000, 100);
     stats.clearRect(0, 0, 250, 400);
     ctx.font = "45px minecraftia";
-    ctx.textAlign = "right";
+    ctx.textAlign = "center";
     ctx.fillStyle = "white";
     if(diamonds == 1){
-        ctx.fillText(diamonds + " Diamond", 500, 70);
-        ctx.lineWidth = 2;
-        ctx.strokeStyle = "black";
-        ctx.strokeText(diamonds + " Diamond", 500, 70);
+        ctx.fillText(diamonds, 250, 70);
+        ctx.font = "30px minecraftia";
+        ctx.fillText("diamond", 250, 90);
     }else{
-        if(diamonds > 1000000){
-            ctx.fillText(Mdiamonds + "M Diamonds", 500, 70);
-            ctx.lineWidth = 2;
-            ctx.strokeStyle = "black";
-            ctx.strokeText(Mdiamonds + "M Diamonds", 500, 70);
+        if(diamonds > 999999){
+            ctx.font = "45px minecraftia";
+            ctx.fillText(Mdiamonds + "M", 250, 70);
+            ctx.font = "30px minecraftia";
+            ctx.fillText("diamonds", 250, 90);
         }else{
             if(diamonds > 1000){
-                ctx.fillText(kDiamonds + " Diamonds", 500, 70);
-                ctx.lineWidth = 2;
-                ctx.strokeStyle = "black";
-                ctx.strokeText(kDiamonds  + " Diamonds", 500, 70);
+                ctx.font = "45px minecraftia";
+                ctx.fillText(kDiamonds, 250, 70);
+                ctx.font = "30px minecraftia";
+                ctx.fillText("diamonds", 250, 90);
             }else{
-                ctx.fillText(diamonds + " Diamonds", 500, 70);
-                ctx.lineWidth = 2;
-                ctx.strokeStyle = "black";
-                ctx.strokeText(diamonds  + " Diamonds", 500, 70); 
+                ctx.font = "45px minecraftia";
+                ctx.fillText(diamonds, 250, 70);
+                ctx.font = "30px minecraftia";
+                ctx.fillText("diamonds", 250, 90);
             }
 
         }
@@ -98,15 +103,25 @@ function draw(){
     ctx.textAlign = "center";
     ctx.font = "20px minecraftia";
     ctx.fillStyle = "yellow";
-    ctx.fillText(mess, 345, 110);
+    ctx.fillText(mess, 250, 110);
     
     ctx.fillStyle = "white";
     stats.font = "40px minecraftia";
     stats.fillText("Stats", 65, 70);
     stats.font = "18px minecraftia";
     stats.fillText(eff + "% Efficiency", 10, 95);
-    stats.fillText(fortuneMod + "x Fortune modifier", 10, 125);
-    stats.fillText(totDia + " diamonds mined", 10, 160);
+    stats.fillText(fortuneMod + "x Fortune mod", 10, 125);
+    
+    if(totDia > 999){
+        if(totDia > 999999){
+            stats.fillText(MTotDia + "M total mined", 10, 160); 
+        }else{
+            stats.fillText(kTotDia + " total mined", 10, 160); 
+        }
+    }else{
+        stats.fillText(totDia + " total mined", 10, 160);
+    }
+
     stats.fillText(totDiaClicked + " times clicked", 10, 194);
     stats.fillText(dps + " dps", 10, 225);
     
