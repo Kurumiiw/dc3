@@ -17,7 +17,7 @@ function createWindow () {
   //win.setMenu(null);
   winLoad.once('ready-to-show', () =>{
   })
-  win.loadURL(`file://${__dirname}/index.html`)
+  win.loadURL(`file://${__dirname}/menu.html`)
 
   win.once('ready-to-show', () => {
         winLoad.hide()
