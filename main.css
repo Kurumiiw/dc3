@@ -600,7 +600,7 @@ body{
 
 #achievement{
     position: fixed;
-    bottom: 100px;
+    bottom: 35px;
     height: 75px;
     width: 0 ;
     background-color: rgba(0, 0, 0, 0.5);
@@ -630,108 +630,6 @@ body{
 
 #achievementText{
     background-image: url(imgs/achievements/placeholder.png);
-    height: 42px;
-    margin-top: -2px;
-    margin-left: 71px;
-    width: 168px;
-}
-
-#achievementsMenuBtn{
-    border: 1px solid white;
-    width: 25px;
-    height: 65px;
-    float: left;
-    bottom: 32px;
-    position: absolute;
-    transition: 0.5s;
-    z-index: 2;
-}
-
-#achievementsMenu{
-    height: 450px; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    left: 0;
-    image-rendering: pixelated; 
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-    box-shadow: 0 0 10px black;
-    background-color: rgba(0, 0, 0, 0.25);
-    margin-top: 20px;
-    bottom: 32px;
-}
-
-#aTheBeginning{    
-    position: fixed;
-    width: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 10px black;
-    transition: 0.5s;
-    background-size: static;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    margin-left: 10px;
-    height: 75px;
-}
-
-#aTBIco{
-    height: 64px;
-    width: 64px;
-    margin-top: 5px;
-    margin-left: 5px;
-    background-image: url(imgs/achievements/theBeginning/ico.png);
-}
-
-#aTBTitle{
-    background-image: url(imgs/achievements/theBeginning/title.png);
-    height: 20px;
-    margin-top: -64px;
-    margin-left: 68px;
-    width: 168px;
-}
-
-#aTBText{
-    background-image: url(imgs/achievements/theBeginning/text.png);
-    height: 42px;
-    margin-top: -2px;
-    margin-left: 71px;
-    width: 168px;
-}
-
-#aShiney{    
-    position: fixed;
-    width: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 10px black;
-    transition: 0.5s;
-    background-size: static;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    margin-left: 10px;
-    height: 75px;
-    margin-top: 85px;
-}
-
-#aSIco{
-    height: 64px;
-    width: 64px;
-    margin-top: 5px;
-    margin-left: 5px;
-    background-image: url(imgs/achievements/shiney/ico.png);
-}
-
-#aSTitle{
-    background-image: url(imgs/achievements/shiney/title.png);
-    height: 20px;
-    margin-top: -64px;
-    margin-left: 68px;
-    width: 168px;
-}
-
-#aSText{
-    background-image: url(imgs/achievements/shiney/text.png);
     height: 42px;
     margin-top: -2px;
     margin-left: 71px;
