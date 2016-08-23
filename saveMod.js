@@ -1,16 +1,19 @@
 var gameSave = "game" + localStorage.getItem("activeSave") + "Saved";
 function save1(){
     localStorage.setItem("activeSave", 1);
+    gameSave = "game" + localStorage.getItem("activeSave") + "Saved";
     startGame();
 }
 
 function save2(){
     localStorage.setItem("activeSave", 2);
+    gameSave = "game" + localStorage.getItem("activeSave") + "Saved";
     startGame(); 
 }
 
 function save3(){
     localStorage.setItem("activeSave", 3);
+    gameSave = "game" + localStorage.getItem("activeSave") + "Saved";
     startGame();
 }
 
