@@ -31,7 +31,7 @@ function save(){
             
             
             localStorage.setItem("game1Saved", 1);
-            alert("Game saved.");
+            message("Game saved.");
         }
     }else{
         if(localStorage.getItem("activeSave") == 2){
@@ -65,7 +65,7 @@ function save(){
                 localStorage.setItem("achievement_1000_2", JSON.stringify(achievement_1000));
             
                 localStorage.setItem("game2Saved", 1);
-                alert("Game saved.");
+                message("Game saved.");
                 
             } 
         }else{
@@ -100,7 +100,7 @@ function save(){
                     localStorage.setItem("achievement_1000_3", JSON.stringify(achievement_1000));
             
                     localStorage.setItem("game3Saved", 1);
-                    alert("Game saved.");
+                    message("Game saved.");
                 } 
             }else{
                 console.error("Error on load of save.");
@@ -264,7 +264,6 @@ function deleteSave(){
             localStorage.removeItem("achievement_1000_1");
             
             localStorage.setItem("game1Saved", 0);
-            alert("Deleted save.");
         }
     }else{
         if(localStorage.getItem("activeSave") == 2){
@@ -298,7 +297,6 @@ function deleteSave(){
                 localStorage.removeItem("achievement_1000_2");
             
             localStorage.setItem("game2Saved", 0);
-                alert("Deleted save.");
             }
         }else{
             if(localStorage.getItem("activeSave") == 3){
@@ -332,7 +330,6 @@ function deleteSave(){
                     localStorage.removeItem("achievement_1000_3");
             
                     localStorage.setItem("game3Saved", 0);
-                    alert("Deleted save.");
                 }
             }
         }

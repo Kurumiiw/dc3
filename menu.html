@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link href='https://fonts.googleapis.com/css?family=Exo+2' rel='stylesheet' type='text/css'>
         <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="menu.css" />
         <meta charset="UTF-8">
         <title>Diamond Clicker 3</title>
@@ -10,30 +10,36 @@
     <body onload="drawSaves();">
         <div id="titleBar">
             <div id="title">Diamond Clicker 3</div>
-            <div id="buildnum">build015</div>
             <div id="titleBtns">
                 <div id="t_close"></div>
                 <div id="t_window"></div>
                 <div id="t_minimize"></div>
             </div>
         </div>
-        <center><div id="logo"></div></center>
+        <center><div id="logo"></div><div id="buildnum">build015</div></center>
         <div id="buttons">
             <div id="play" onclick="play();">
             <div id="playHov"></div>
             </div>
-            <div id="settings">
+            <div id="settingsBtn" onclick="settings();">
             <div id="settingsHov"></div>
             </div>
             <div id="exit">
             <div id="exitHov"></div>
             </div>
         </div>
-        <center><div id="loadGame"><br />
+        <center><div id="loadGame"><br>
             <div id="game1"><div id="game1Content" onclick="save1();"></div></div><div id="game1Erase" onclick="erase1();"></div>
             <div id="game2"><div id="game2Content" onclick="save2();"></div></div><div id="game2Erase" onclick="erase2();"></div>
             <div id="game3"><div id="game3Content" onclick="save3();"></div></div><div id="game3Erase" onclick="erase3();"></div>
         </div></center>
+        <div id="settings">
+            <div id="settingsTitle"><b>Settings</b></div>
+            <div id="music"><div id="Msel" onclick="musicF();"></div>Music</div>
+        </div>
+        <div id="legal" title="This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+"></div>
+        <div id="author">&copy Ola Jacobsen / Vemund Langaas / Thomas Carlsten 2016</div>
     </body>
     <script type="text/javascript" src="menu.js"></script>
     <script type="text/javascript" src="saveMod.js"></script>

@@ -75,6 +75,12 @@ function drawSaves(){
         document.getElementById("game3Content").innerHTML = "";
     }
     
+    if(playing == 1){
+        document.getElementById("Msel").style.backgroundColor = "#696969";
+    }else{
+        document.getElementById("Msel").style.backgroundColor = "#969696";
+    }
+    
     setTimeout(function(){
         drawSaves();
     }, 33);
